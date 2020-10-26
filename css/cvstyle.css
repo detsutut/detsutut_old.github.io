@@ -5,6 +5,15 @@
     border-radius: 50%;
 }
 
+@media (max-width: 1000px) {
+    .avatar {
+        vertical-align: middle;
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+    }
+}
+
 body{
     margin-top:20px;
     background:#eee;
