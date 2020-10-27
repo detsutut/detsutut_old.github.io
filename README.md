@@ -1,6 +1,6 @@
 # [Detsutut Personal Site](https://detsutut.github.io/)
 
-[Scrolling Nav](https://startbootstrap.com/templates/scrolling-nav/) is an unstyled one page starter template with a collapsing, smooth scrolling navigation bar for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
+I was just tired of online free CV editors :)
 
 # Details
 
