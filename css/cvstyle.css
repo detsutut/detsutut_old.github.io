@@ -295,18 +295,26 @@ body{
 
 @keyframes tilt {
 	0% {
+        -ms-transform: scale(0deg); /* IE 9 */
+        -webkit-transform: scale(0deg); /* Safari 3-8 */
 		transform: rotate(0deg);
 	}
 
 	25% {
+        -ms-transform: scale(5deg); /* IE 9 */
+        -webkit-transform: scale(5deg); /* Safari 3-8 */
 		transform: rotate(5deg);
     }
     
     50% {
+        -ms-transform: scale(0deg); /* IE 9 */
+        -webkit-transform: scale(0deg); /* Safari 3-8 */
 		transform: rotate(0deg);
     }
     
     75% {
+        -ms-transform: scale(-5deg); /* IE 9 */
+        -webkit-transform: scale(-5deg); /* Safari 3-8 */
 		transform: rotate(-5deg);
 	}
 }
