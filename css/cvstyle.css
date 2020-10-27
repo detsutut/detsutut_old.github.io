@@ -275,6 +275,42 @@ body{
     box-shadow: 0 0 0 5px #f2f3f8
 }
 
+.timeline .timeline-virus {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 50%;
+    margin-bottom: 20px;
+    top: 1px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    text-align: center
+}
+
+.tilt {
+    animation: tilt 2s infinite;
+}
+
+@keyframes tilt {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(5deg);
+    }
+    
+    50% {
+		transform: rotate(0deg);
+    }
+    
+    75% {
+		transform: rotate(-5deg);
+	}
+}
+
 .timeline .timeline-label {
     position: relative;
     float: left;
@@ -475,6 +511,11 @@ body{
         transform: translateX(-50%);
         margin: 0 0 20px 42px
     }
+
+    .timeline-virus {
+        text-align: left!important;
+    }
+
     .timeline.timeline .timeline-label + .timeline-item + .timeline-item {
         margin-top: 0
     }
