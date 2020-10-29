@@ -104,25 +104,21 @@
                                 <p>
                                     Currently researching NLP techniques to improve patient representation learning and classification with italian biomedical language models.                                    
                                 </p>
+                                <p>
+                                    <kbd data-toggle="popover" title="Natural Language Processing" data-content="NLP is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data." style="cursor:pointer; background-color:#e76c90;">NLP</kbd>
+                                    <kbd data-toggle="popover" title="Topic Modeling" data-content="In machine learning and natural language processing, a topic model is a type of statistical model for discovering the abstract topics that occur in a collection of documents. Topic modeling is a frequently used text-mining tool for discovery of hidden semantic structures in a text body." style="cursor:pointer; background-color:#e76c90;">Topic Modeling</kbd>
+                                    <kbd data-toggle="popover" title="Language Models" data-content="A statistical language model is a probability distribution over sequences of words. Given such a sequence, say of length m, it assigns a probability to the whole sequence. The language model provides context to distinguish between words and phrases that sound similar." style="cursor:pointer; background-color:#e76c90;">Language Models</kbd>
+                                </p>
                             </div>
-                            <div class="widget-footer d-flex align-items-center">
-                                <div class="col-xl-3 col-md-3 col-3 no-padding d-flex justify-content-start">
-                                    <div class="users-like">
-                                        <a href="" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" >
-                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="img-fluid rounded-circle " alt="...">
-                                        </a>
-                                        <a href="#">
-                                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid rounded-circle" alt="...">
-                                        </a>
+                            <div class="widget-footer">      
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="https://goo.gl/maps/JkFHxR87TyY2Bc95A" target="_blank" style="text-decoration: none; "><i class="la la-map-marker" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Pavia</span></i></a>
                                     </div>
-                                </div>
-                                <div class="col-xl-9 col-md-9 col-9 no-padding d-flex justify-content-end">
-                                    <div class="meta">
-                                        <ul>
-                                            <li><a href="#"><i class="la la-calendar"></i><span class="numb">01/10/2020 - Ongoing</span></a></li>
-                                        </ul>
+                                    <div class="col">
+                                        <i class="la la-calendar" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">01/10/2020 - Ongoing</span></i>
                                     </div>
-                                </div>
+                                  </div>                        
                             </div>
                         </div>
                         <div class="time-right">01/10/2020</div>
@@ -171,7 +167,7 @@
                                   </div>
                                   <div class="media-body align-self-center pl-4">
                                       <strong>Sinapsi</strong><br>
-                                      <i>May, 2020  - Personal Project</i><br><br>
+                                      <i>May, 2020  - Project</i><br><br>
                                       Sinapsi is a web application designed to provide an easy connection between italian family doctors and psychologists, dispensing also useful informative content.
 
                                       Sinapsi's services are meant to be used from trusted family doctors only and are therefore password-protected using a clinet-side AES-256 encryption.
@@ -203,7 +199,7 @@
                                   </div>
                                   <div class="media-body align-self-center pl-4">
                                       <strong>Fantasimulatore</strong><br>
-                                      <i>May, 2020 - Personal Project</i><br><br>
+                                      <i>May, 2020 - Project</i><br><br>
                                       Shiny web app to simulate alternative realities and cancel out the luck factor from Italian Serie A fantasy football (a.k.a. Fantacalcio).
                                       <a href="https://detsutut.github.io/sinapsi/demo" style="color: #fff;"><strong>Click here to give it a try!</strong></a>.
                                   </div>
@@ -278,11 +274,21 @@
                     </div>
                 </div>
 
-                <span class="timeline-virus tilt">
+                <span class="timeline-virus tilt" onclick="checkClicks(this)" data-toggle="modal" data-target="#coffinDanceModal"> 
                     <br><br><br>
                     <img src="virus.png" class="img-fluid rounded-circle " alt="..." style="width:15%">
                     <br><br><br><br>
                 </span>
+                <!-- Modal -->
+                <div class="modal fade" style="opacity:0.9;" id="coffinDanceModal" tabindex="-1" role="dialog" aria-labelledby="coffinDanceModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pDmB76y7jFs" allowfullscreen></iframe>
+                          </div>
+                    </div>
+                    </div>
+                </div>
 
                 <span class="timeline-label">
                     <span class="label">2019</span>
@@ -316,6 +322,272 @@
                       <div class="time-right">30/12/2019</div>
                     </div>
                 </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-point timeline-point" style="background-color: #fd6f71; color: #fd6f71;"></div>
+                    <div class="timeline-event">
+                      <div class="widget icon-widget has-shadow" style="background-color: #fd6f71;">
+                          <div class="widget-body" style="color: #fff;">
+                              <div class="media">
+                                  <div class="media-left">
+                                      <i class="la la-flask" style="font-size: 4rem;"></i>
+                                  </div>
+                                  <div class="media-body align-self-center pl-4">
+                                      <strong>ShinyDBNet</strong><br>
+                                      <i>Nov, 2019 - Project</i><br><br>
+                                      Originally developed whithin the AMC's ADFICE_IT project as an educational tool for fall-risk prevention in eldery patients, this open-source Shiny application evolved as a public, generic toolkit providing an interactive framework for learning, visualizing and reasoning with Discrete Bayesian Networks (DBNs). A DBN is a type of probabilistic graphical model that uses Bayesian inference for probability computations.<br><a href="https://detsutut.shinyapps.io/shinyDBNet/" style="color: #fff;"><strong>Click here to run the web app</strong></a>.
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="widget-footer no-bg no-border pt-0 d-flex justify-content-end">
+                              <div class="meta" style="font-size: 0.85rem;">
+                                <ul>
+                                    <li ><a href="https://github.com/detsutut/shinyDBNet" target="_blank"><span class="numb" style="color: #fff;">Source code <i class="la la-github" style="color: #fff;"></i></span></a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="time-right">01/11/2019</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-point timeline-point" style="background-color: #00aced; color: #00aced;"></div>
+                    <div class="timeline-event">
+                      <div class="widget icon-widget has-shadow" style="background-color: #00aced;">
+                          <div class="widget-body" style="color: #fff;">
+                              <div class="media">
+                                  <div class="media-left ">
+                                    <i class="la la-newspaper-o" style="font-size: 4rem;"></i>
+                                  </div>
+                                  <div class="media-body align-self-center pl-4">
+                                      <strong>Exploring chromatic storytelling in movies with R: the ChromaR package</strong><br>
+                                      <i>Aug 5, 2019 - Towards Data Science</i><br><br>
+                                      Color can affect us psychologically and emotionally without us even becoming aware. Different colors can be used to create harmony either tension within a scene, to reinforce an idea the director is trying to convey to the spectators, to bring attention to a key visual theme, to show a character’s journey, and more.
+                                      ChromaR is a R package which allows the user to explore many aspects of chromatic visualizations.                                  </div>
+                              </div>
+                          </div>
+                          <div class="widget-footer no-bg no-border pt-0 d-flex justify-content-end">
+                              <div class="meta" style="font-size: 0.85rem;">
+                                <ul>
+                                  <li ><a href="https://towardsdatascience.com/the-chromar-package-892b716ee2c9" target="_blank"><span class="numb" style="color: #fff;">Read more <i class="la la-external-link"></i></span></a></li>
+                                </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="time-right">05/08/2019</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-point timeline-point"></div>
+                    <div class="timeline-event">
+                        <div class="widget has-shadow">
+                            <div class="widget-header d-flex align-items-center">
+                                <div class="user-image">
+                                    <img class="rounded-circle" src="umc.png" alt="...">
+                                </div>
+                                <div class="d-flex flex-column mr-auto">
+                                    <div class="title">
+                                        <span class="username">Machine Learning Engineer</span><br> Academic Medical Center (AMC)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <p>
+                                    Worked on falls prevention in eldery patients, implementing a support system based on discrete bayesian networks.<br>
+                                    Researched Natural Language Processing methods (word embeddings, language models) applied to free-text clinical notes. 
+                                </p>
+                                <p>
+                                    <kbd data-toggle="popover" title="Natural Language Processing" data-content="NLP is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data." style="cursor:pointer; background-color:#e76c90;">NLP</kbd>
+                                    <kbd data-toggle="popover" title="Machine Learning" data-content="Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a mathematical model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so." style="cursor:pointer; background-color:#e76c90;">Machine Learning</kbd>
+                                    <kbd data-toggle="popover" title="Bayesian Inference" data-content="Bayesian inference is a method of statistical inference in which Bayes' theorem is used to update the probability for a hypothesis as more evidence or information becomes available. Bayesian inference is an important technique in statistics, and especially in mathematical statistics." style="cursor:pointer; background-color:#e76c90;">Bayesian Network</kbd>
+                                </p>
+                            </div>
+                            <div class="widget-footer">      
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="https://g.page/Amsterdam_UMC_loc_AMC?share" target="_blank" style="text-decoration: none; "><i class="la la-map-marker" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Amsterdam</span></i></a>
+                                    </div>
+                                    <div class="col">
+                                        <i class="la la-calendar" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Aug 2019 -  Mar 2020</span></i>
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="time-right">01/08/2019</div>
+                    </div>
+                </div>
+
+                <span class="timeline-virus tilt" data-toggle="modal" data-target="#exampleModalCenter">
+                    <br>
+                    <img src="grad.png" class="img-fluid rounded-circle " alt="..." style="cursor: pointer; width:15%">
+                    <br><br><br><br>
+                </span>
+
+                <!-- Modal -->
+                <div class="modal fade" style="opacity:0.9;" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Master's Degree in Biomedical Engineering</h5><br>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>University of Pavia, 110 / 110 Cum Laude</h6>
+                            <p>
+                                Period: Sep 2016 - Jul 2019
+                            </p>
+                            <p>
+                                Courses: 
+                                <ul>
+                                    <li>Advanced Biomedical Machine Learning (30/30)</li>
+                                    <li>Medical Informatics (30L/30)</li>
+                                    <li>Data Mining and Clinical Decision Support (30/30)</li>
+                                    <li>Telemedicine (29/30)</li>
+                                    <li>Information Security (30/30)</li>
+                                    <li>Biomathematics (28/30)</li>
+                                    <li>Artificial Intelligence in Medicine (28/30)</li>
+                                </ul>
+                            </p>
+                            <p>Link: <a href="http://lmbioing.unipv.eu/" target="_blank"> Biomedical Engineering official website</a></p>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-point timeline-point" style="background-color: #00aced; color: #00aced;"></div>
+                    <div class="timeline-event">
+                      <div class="widget icon-widget has-shadow" style="background-color: #00aced;">
+                          <div class="widget-body" style="color: #fff;">
+                              <div class="media">
+                                  <div class="media-left ">
+                                    <i class="la la-newspaper-o" style="font-size: 4rem;"></i>
+                                  </div>
+                                  <div class="media-body align-self-center pl-4">
+                                      <strong>Exploring chromatic storytelling in movies with R</strong><br>
+                                      <i>Apr 8, 2019 - Towards Data Science</i><br><br>
+                                      Color is one of the most powerful means of conveying information to the audience, and this is why many of the greatest movie directors have an extensive background in visual arts.<br>Data can be used to investigate their chromatic fingerprints.            
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="widget-footer no-bg no-border pt-0 d-flex justify-content-end">
+                              <div class="meta" style="font-size: 0.85rem;">
+                                <ul>
+                                  <li ><a href="https://towardsdatascience.com/exploring-chromatic-storytelling-with-r-part-1-8e9ddf8d4187" target="_blank"><span class="numb" style="color: #fff;">Read more <i class="la la-external-link"></i></span></a></li>
+                                </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="time-right">08/04/2019</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-point timeline-point" style="background-color: #fd6f71; color: #fd6f71;"></div>
+                    <div class="timeline-event">
+                      <div class="widget icon-widget has-shadow" style="background-color: #fd6f71;">
+                          <div class="widget-body" style="color: #fff;">
+                              <div class="media">
+                                  <div class="media-left">
+                                      <i class="la la-flask" style="font-size: 4rem;"></i>
+                                  </div>
+                                  <div class="media-body align-self-center pl-4">
+                                      <strong>ChromaR</strong><br>
+                                      <i>Apr, 2019 - Project</i><br><br>
+                                      ChromaR is a R package that leverages color theory, data visualization and machine learning to provide a wide variety of visual and analytical tools for chromatic analysis of movies and clips.<br>ChromaR can be also used to extract color palettes from stills and pictures.
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="widget-footer no-bg no-border pt-0 d-flex justify-content-end">
+                              <div class="meta" style="font-size: 0.85rem;">
+                                <ul>
+                                    <li ><a href="https://github.com/detsutut/chroma" target="_blank"><span class="numb" style="color: #fff;">Source code <i class="la la-github" style="color: #fff;"></i></span></a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="time-right">05/04/2019</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-point timeline-point" style="background-color: #00aced; color: #00aced;"></div>
+                    <div class="timeline-event">
+                      <div class="widget icon-widget has-shadow" style="background-color: #00aced;">
+                          <div class="widget-body" style="color: #fff;">
+                              <div class="media">
+                                  <div class="media-left ">
+                                    <i class="la la-newspaper-o" style="font-size: 4rem;"></i>
+                                  </div>
+                                  <div class="media-body align-self-center pl-4">
+                                      <strong>Man is to Doctor as Woman is to Nurse: the Dangerous Bias of Word Embeddings</strong><br>
+                                      <i>Mar 8, 2019 - Towards Data Science</i><br><br>
+                                      Language is one of the most powerful means through which sexism and gender discrimination are perpetrated and reproduced, and a naive application of NLP techniques risks to transfer these social biases risk to machines.
+                                </div>
+                              </div>
+                          <div class="widget-footer no-bg no-border pt-0 d-flex justify-content-end">
+                              <div class="meta" style="font-size: 0.85rem;">
+                                <ul>
+                                  <li ><a href="https://towardsdatascience.com/gender-bias-word-embeddings-76d9806a0e17" target="_blank"><span class="numb" style="color: #fff;">Read more <i class="la la-external-link"></i></span></a></li>
+                                </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="time-right">08/03/2019</div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-point timeline-point"></div>
+                    <div class="timeline-event">
+                        <div class="widget has-shadow">
+                            <div class="widget-header d-flex align-items-center">
+                                <div class="user-image">
+                                    <img class="rounded-circle" src="tds.png" alt="...">
+                                </div>
+                                <div class="d-flex flex-column mr-auto">
+                                    <div class="title">
+                                        <span class="username">Author</span><br> Towards Data Science
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <p>
+                                    Writing about Data Science, Machine Learning, Artificial Intelligence and Programming for one of the most popular data science blogs in the world.
+                                </p>
+                                <p>
+                                    <kbd data-toggle="popover" title="Natural Language Processing" data-content="NLP is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data." style="cursor:pointer; background-color:#e76c90;">NLP</kbd>
+                                    <kbd data-toggle="popover" title="Machine Learning" data-content="Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a mathematical model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so." style="cursor:pointer; background-color:#e76c90;">Machine Learning</kbd>
+                                    <kbd data-toggle="popover" title="Bayesian Inference" data-content="Bayesian inference is a method of statistical inference in which Bayes' theorem is used to update the probability for a hypothesis as more evidence or information becomes available. Bayesian inference is an important technique in statistics, and especially in mathematical statistics." style="cursor:pointer; background-color:#e76c90;">Bayesian Network</kbd>
+                                </p>
+                            </div>
+                            <div class="widget-footer">      
+                                <div class="row">
+                                    <div class="col">
+                                        <i class="la la-globe" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Online</span></i></a>
+                                    </div>
+                                    <div class="col">
+                                        <i class="la la-calendar" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Mar 2019 -  Ongoing</span></i>
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="time-right">01/03/2019</div>
+                    </div>
+                </div>
+
+                <span class="timeline-label">
+                    <span class="label">2018</span>
+                    <br><br><br>
+                </span>
 
                 <div class="timeline-item">
                     <div class="timeline-point timeline-point" style="background-color: #fd6f71; color: #fd6f71;"></div>
@@ -491,10 +763,21 @@
     </div>
     <!-- /.container -->
   </footer>
+  
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function checkClicks() {
+        alert("ciao")
+    }
+    $(document).ready(function(){
+      $('[data-toggle="popover"]').popover();
+    });
+  </script>
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
