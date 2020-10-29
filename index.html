@@ -274,9 +274,9 @@
                     </div>
                 </div>
 
-                <span class="timeline-virus tilt" onclick="checkClicks(this)" data-toggle="modal" data-target="#coffinDanceModal"> 
+                <span class="timeline-virus tilt" onclick="checkClicks()"> 
                     <br><br><br>
-                    <img src="virus.png" class="img-fluid rounded-circle " alt="..." style="width:15%">
+                    <img src="virus.png" id="virus" class="img-fluid rounded-circle " alt="..." style="width:15%; cursor: pointer;">
                     <br><br><br><br>
                 </span>
                 <!-- Modal -->
@@ -771,8 +771,15 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script>
+    clickCounter =0;
     function checkClicks() {
-        alert("ciao")
+        clickCounter++;
+        document.getElementById("virus").style.width = (15+clickCounter)+"%";
+        if (clickCounter>10){
+            $('#coffinDanceModal').modal('toggle');
+            clickCounter =0;
+            document.getElementById("virus").style.width = (15+clickCounter)+"%";
+        }
     }
     $(document).ready(function(){
       $('[data-toggle="popover"]').popover();
