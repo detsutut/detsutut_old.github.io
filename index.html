@@ -47,7 +47,7 @@
 
   <header class="bg-primary text-white">
     <div class="container text-center">
-        <img src="avatar.jpg" alt="Avatar" class="avatar">
+        <img src="avatar.jpg" alt="Avatar" id="avatar" class="avatar"  onclick="checkClicksAvatar()" style="cursor:pointer">
         <br><br><br>
       <h1>Tommaso Mario Buonocore</h1>
       <p class="lead"><strong>Ph.D. Student - Big Data & Biomedical Informatics</strong> / University of Pavia </p>
@@ -66,7 +66,16 @@
           <h2>About me</h2>
           <p class="lead">Biomedical Engineer and AI enthusiast, currently researching NLP solutions to improve healthcare-based prediction tasks leveraging Italian clinical notes.</p>
           <p class="lead">Geek, musician, bicycle lover. I embrace social and environmental sustainability to support more fair, responsible and ethical relations with the planet and its humans.</p>
-          <p class="lead">WORK IN PROGRESS!</p>
+          <p class="lead"><a class="js-scroll-trigger" href="#timeline">Scroll down</a> to know more about me and my experiences.</p>
+          <p class="lead"><b>Want to stick with traditional resumes?</b> I got you covered!&nbsp;
+          <button type="button" class="btn btn-primary">
+            <a href='data/cv.pdf' style="text-decoration: none; color: #fff;" download>
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg> Download CV
+            </a>
+        </button></p>
         </div>
       </div>
     </div>
@@ -78,9 +87,6 @@
         <div class="col-xl-10 col-12">
             <h2 style="text-align: center;">Timeline</h2> <br><br>
             <div class="timeline timeline-line-solid">
-
-
-
                 <span class="timeline-label">
                     <span class="label">2020</span>
                     <br><br><br>
@@ -462,6 +468,44 @@
                 </div>
 
                 <div class="timeline-item">
+                    <div class="timeline-point timeline-point"></div>
+                    <div class="timeline-event">
+                        <div class="widget has-shadow">
+                            <div class="widget-header d-flex align-items-center">
+                                <div class="user-image">
+                                    <img class="rounded-circle" src="biomeris.png" alt="...">
+                                </div>
+                                <div class="d-flex flex-column mr-auto">
+                                    <div class="title">
+                                        <span class="username">Software Engineer</span><br> Biomeris S.r.l.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <p>
+                                    Worked on software modules for Diagnostic Therapeutic Care Pathway management for Multiple Sclerosis.                                </p>
+                                <p>
+                                    <kbd data-toggle="popover" title="JavaScript" data-content="JavaScript is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions." style="cursor:pointer; background-color:#e76c90;">JavaScript</kbd>
+                                    <kbd data-toggle="popover" title="Angular" data-content="Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations." style="cursor:pointer; background-color:#e76c90;">Angular</kbd>
+                                    <kbd data-toggle="popover" title="Health Informatics" data-content="Health informatics is information engineering applied to the field of health care, essentially the management and use of patient health care information." style="cursor:pointer; background-color:#e76c90;">Health Informatics</kbd>
+                                </p>
+                            </div>
+                            <div class="widget-footer">      
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="https://goo.gl/maps/JkFHxR87TyY2Bc95A" target="_blank" style="text-decoration: none; "><i class="la la-map-marker" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Pavia</span></i></a>
+                                    </div>
+                                    <div class="col">
+                                        <i class="la la-calendar" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">May 2019 -  Jul 2019</span></i>
+                                    </div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="time-right">01/05/2019</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
                     <div class="timeline-point timeline-point" style="background-color: #00aced; color: #00aced;"></div>
                     <div class="timeline-event">
                       <div class="widget icon-widget has-shadow" style="background-color: #00aced;">
@@ -564,9 +608,8 @@
                                     Writing about Data Science, Machine Learning, Artificial Intelligence and Programming for one of the most popular data science blogs in the world.
                                 </p>
                                 <p>
-                                    <kbd data-toggle="popover" title="Natural Language Processing" data-content="NLP is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data." style="cursor:pointer; background-color:#e76c90;">NLP</kbd>
-                                    <kbd data-toggle="popover" title="Machine Learning" data-content="Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a mathematical model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so." style="cursor:pointer; background-color:#e76c90;">Machine Learning</kbd>
-                                    <kbd data-toggle="popover" title="Bayesian Inference" data-content="Bayesian inference is a method of statistical inference in which Bayes' theorem is used to update the probability for a hypothesis as more evidence or information becomes available. Bayesian inference is an important technique in statistics, and especially in mathematical statistics." style="cursor:pointer; background-color:#e76c90;">Bayesian Network</kbd>
+                                    <kbd data-toggle="popover" title="Data Science" data-content="Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data." style="cursor:pointer; background-color:#e76c90;">Data Science</kbd>
+                                    <kbd data-toggle="popover" title="Technical Writing" data-content="Technical writing is writing or drafting technical communication used in technical and occupational fields, such as computer hardware and software, engineering, chemistry, aeronautics, robotics, finance, medical, consumer electronics, biotechnology, and forestry." style="cursor:pointer; background-color:#e76c90;">Technical Writing</kbd>
                                 </p>
                             </div>
                             <div class="widget-footer">      
@@ -590,104 +633,154 @@
                 </span>
 
                 <div class="timeline-item">
-                    <div class="timeline-point timeline-point" style="background-color: #fd6f71; color: #fd6f71;"></div>
+                    <div class="timeline-point timeline-point"></div>
                     <div class="timeline-event">
                         <div class="widget has-shadow">
-                            <div class="alert alert-success" role="alert" style="background-color: #fd6f71; color: #fff;">
-                                <a href="https://github.com/detsutut/chroma/releases/tag/v0.4.0-alpha" target="_blank" style="color: #fff;"><strong>WORK IN PROGRESS <i class="la la-github" style="color: #fff;"></i></strong></a><br>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! <br>Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam. <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.<br>
+                            <div class="widget-header d-flex align-items-center">
+                                <div class="user-image">
+                                    <img class="rounded-circle" src="umc.png" alt="...">
+                                </div>
+                                <div class="d-flex flex-column mr-auto">
+                                    <div class="title">
+                                        <span class="username">Machine Learning Engineer</span><br> Academic Medical Center (AMC)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <p>
+                                    Researched NLP models for the early detection of Colorectal Cancer leveraging EHR unstructured data.
+                                </p>
+                                <p>
+                                    <kbd data-toggle="popover" title="Natural Language Processing" data-content="NLP is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data." style="cursor:pointer; background-color:#e76c90;">NLP</kbd>
+                                    <kbd data-toggle="popover" title="Machine Learning" data-content="Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a mathematical model based on sample data, known as training data, in order to make predictions or decisions without being explicitly programmed to do so." style="cursor:pointer; background-color:#e76c90;">Machine Learning</kbd>
+                                    <kbd data-toggle="popover" title="R" data-content="R is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing." style="cursor:pointer; background-color:#e76c90;">R</kbd>
+                                    <kbd data-toggle="popover" title="Python" data-content="Python is an interpreted, high-level and general-purpose programming language. Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects." style="cursor:pointer; background-color:#e76c90;">Python</kbd>
+                                </p>
+                            </div>
+                            <div class="widget-footer">      
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="https://g.page/Amsterdam_UMC_loc_AMC?share" target="_blank" style="text-decoration: none; "><i class="la la-map-marker" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Amsterdam</span></i></a>
+                                    </div>
+                                    <div class="col">
+                                        <i class="la la-calendar" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Oct 2018 -  Mar 2019</span></i>
+                                    </div>
+                                </div>                        
                             </div>
                         </div>
-                        <div class="time-right">15/09/2020</div>
+                        <div class="time-right">01/10/2018</div>
                     </div>
                 </div>
 
+                <span class="timeline-label">
+                    <span class="label">2017</span>
+                    <br><br><br>
+                </span>
 
-                <div class="timeline-item">
-                    <div class="timeline-point timeline-point" style="background-color: #00aced; color: #00aced;"></div>
-                    <div class="timeline-event">
-                      <div class="widget icon-widget has-shadow" style="background-color: #00aced;">
-                          <div class="widget-body" style="color: #fff;">
-                              <div class="media">
-                                  <div class="media-left align-self-center">
-                                      <i class="la la-newspaper-o" style="font-size: 4rem;"></i>
-                                  </div>
-                                  <div class="media-body align-self-center pl-4">
-                                      WORK<br>IN PROGRESS
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="widget-footer no-bg no-border pt-0 d-flex justify-content-end">
-                              <div class="meta" style="font-size: 0.85rem;">
-                                <ul>
-                                  <li><a href="#"><i class="la la-calendar"></i><span class="numb">01/10/2020 - Ongoing</span></a></li>
-                                </ul>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="time-right">38 min ago</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-point timeline-point" style="background-color: #fd6f71; color: #fd6f71;"></div>
-                    <div class="timeline-event">
-                        <div class="widget has-shadow">
-                            <div class="alert alert-success" role="alert" style="background-color: #fd6f71; color: #fff;">
-                                <a href="https://github.com/detsutut/chroma/releases/tag/v0.4.0-alpha" target="_blank" style="color: #fff;"><strong>WORK IN PROGRESS <i class="la la-github" style="color: #fff;"></i></strong></a><br>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.<br>
-                            </div>
-                        </div>
-                        <div class="time-right">15/09/2020</div>
-                    </div>
-                </div>
-
-            <div class="timeline-item">
-              <div class="timeline-point timeline-point" style="background-color: #00aced; color: #00aced;"></div>
-              <div class="timeline-event">
-                <div class="widget icon-widget has-shadow" style="background-color: #00aced;">
-                    <div class="widget-body" style="color: #fff;">
-                        <div class="media">
-                            <div class="media-left align-self-center">
-                                <i class="la la-newspaper-o" style="font-size: 4rem;"></i>
-                            </div>
-                            <div class="media-body align-self-center pl-4">
-                                WORK<br>IN PROGRESS
-                            </div>
-                        </div>
-                    </div>
-                    <div class="widget-footer no-bg no-border pt-0 d-flex justify-content-end">
-                        <div class="meta" style="font-size: 0.85rem;">
-                          <ul>
-                            <li><a href="#"><i class="la la-calendar"></i><span class="numb">01/10/2020 - Ongoing</span></a></li>
-                          </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="time-right">38 min ago</div>
-              </div>
-          </div>
+                <span class="timeline-label">
+                    <span class="label">2016</span>
+                    <br><br><br>
+                </span>
 
                 <div class="timeline-item">
                     <div class="timeline-point timeline-point"></div>
                     <div class="timeline-event">
-                        <div class="widget icon-widget has-shadow">
-                            <div class="widget-body">
-                                <div class="media">
-                                    <div class="media-left align-self-center mr-3">
-                                        <a href="#">
-                                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" style="width: 50px;" class="img-fluid rounded-circle" alt="...">
-                                        </a>
-                                    </div>
-                                    <div class="media-body align-self-center">
-                                        WORK IN PROGRESS
+                        <div class="widget has-shadow">
+                            <div class="widget-header d-flex align-items-center">
+                                <div class="user-image">
+                                    <img class="rounded-circle" src="biomeris.png" alt="...">
+                                </div>
+                                <div class="d-flex flex-column mr-auto">
+                                    <div class="title">
+                                        <span class="username">Software Engineer</span><br> Biomeris S.r.l.
                                     </div>
                                 </div>
                             </div>
+                            <div class="widget-body">
+                                <p>
+                                    Worked on a JavaScript library for genograms' representation and visualization.</p>
+                                <p>
+                                    <kbd data-toggle="popover" title="JavaScript" data-content="JavaScript is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions." style="cursor:pointer; background-color:#e76c90;">JavaScript</kbd>
+                                    <kbd data-toggle="popover" title="NoSQL Database" data-content="A NoSQL (originally referring to 'non-SQL' or 'non-relational') database provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases." style="cursor:pointer; background-color:#e76c90;">NoSQL Database</kbd>
+                                    <kbd data-toggle="popover" title="Health Informatics" data-content="Health informatics is information engineering applied to the field of health care, essentially the management and use of patient health care information." style="cursor:pointer; background-color:#e76c90;">Health Informatics</kbd>
+                                </p>
+                            </div>
+                            <div class="widget-footer">      
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="https://goo.gl/maps/JkFHxR87TyY2Bc95A" target="_blank" style="text-decoration: none; "><i class="la la-map-marker" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Pavia</span></i></a>
+                                    </div>
+                                    <div class="col">
+                                        <i class="la la-calendar" style="text-decoration: none; color:#e76c90; font-size: 1.0rem;"><span style="font-weight:100 ;font-family: Arial, Helvetica, sans-serif;">Apr 2016 -  Sep 2016</span></i>
+                                    </div>
+                                </div>                        
+                            </div>
                         </div>
-                        <div class="time-left">47 min ago</div>
+                        <div class="time-right">01/04/2016</div>
                     </div>
                 </div>
+
+                <span class="timeline-virus tilt" data-toggle="modal" data-target="#modalBachelor">
+                    <br>
+                    <img src="grad.png" class="img-fluid rounded-circle " alt="..." style="cursor: pointer; width:15%">
+                    <br><br><br><br>
+                </span>
+
+                <!-- Modal -->
+                <div class="modal fade" style="opacity:0.9;" id="modalBachelor" tabindex="-1" role="dialog" aria-labelledby="modalBachelorTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="modalBachelorTitle">Bachelor's Degree in Biomedical Engineering</h5><br>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>University of Pavia, 100 / 110 </h6>
+                            <p>
+                                Period: Sep 2012 - Apr 2016
+                            </p>
+                            <p>
+                                Courses: 
+                                <ul>
+                                    <li>Advanced Biomedical Machine Learning (30/30)</li>
+                                    <li>Medical Informatics (30L/30)</li>
+                                    <li>Data Mining and Clinical Decision Support (30/30)</li>
+                                    <li>Telemedicine (29/30)</li>
+                                    <li>Information Security (30/30)</li>
+                                    <li>Biomathematics (28/30)</li>
+                                    <li>Artificial Intelligence in Medicine (28/30)</li>
+                                </ul>
+                            </p>
+                            <p>Link: <a href="http://lmbioing.unipv.eu/" target="_blank"> Biomedical Engineering official website</a></p>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <span class="timeline-label">
+                    <span class="label">2015</span>
+                    <br><br><br>
+                </span>
+
+                <span class="timeline-label">
+                    <span class="label">2014</span>
+                    <br><br><br>
+                </span>
+
+                <span class="timeline-label">
+                    <span class="label">2013</span>
+                    <br><br><br>
+                </span>
+
+                <span class="timeline-label">
+                    <span class="label">2012</span>
+                    <br><br><br>
+                </span>
 
                 <div class="timeline-item">
                     <div class="timeline-point timeline-point"></div>
@@ -696,20 +789,32 @@
                             <div class="widget-body">
                                 <div class="today">
                                     <div class="title">Todo</div>
-                                    <div class="new-tasks">Work In progress</div>
+                                    <div class="new-tasks">Work in progress</div>
                                 </div>
                                 <div class="todo-list">
                                     <ul id="sortable" class="list">
                                         <li class="task-color task-violet">
                                             <div class="styled-checkbox">
                                                 <input type="checkbox" id="check-1">
-                                                <label class="text-primary" for="check-1">Work In progress</label>
+                                                <label class="text-primary" for="check-1">Improve view from smartphones</label>
                                             </div>
                                         </li>
                                         <li class="task-color task-blue">
                                             <div class="styled-checkbox">
                                                 <input type="checkbox" id="check-2">
-                                                <label class="text-info" for="check-2">Work In progress</label>
+                                                <label class="text-info" for="check-2">Populate history before 2012</label>
+                                            </div>
+                                        </li>
+                                        <li class="task-color task-red">
+                                            <div class="styled-checkbox">
+                                                <input type="checkbox" id="check-3">
+                                                <label class="text-info" for="check-3">Add more keywords and skills</label>
+                                            </div>
+                                        </li>
+                                        <li class="task-color task-green">
+                                            <div class="styled-checkbox">
+                                                <input type="checkbox" id="check-4">
+                                                <label class="text-info" for="check-4">Git-like timeline for activities' time window</label>
                                             </div>
                                         </li>
                                     </ul>
@@ -719,24 +824,9 @@
                         <div class="time-right">50 min ago</div>
                     </div>
                 </div>
-                <span class="timeline-label">
-                    <span class="label">March</span>
-                </span>
-                <div class="timeline-item">
-                    <div class="timeline-point timeline-point"></div>
-                    <div class="timeline-event">
-                        <div class="widget has-shadow">
-                            <div class="alert alert-success" role="alert">
-                                <strong>Hey!</strong> This is a success alert
-                            </div>
-                        </div>
-                        <div class="time-right">30 March</div>
-                    </div>
-                </div>
-
 
                 <span class="timeline-label">
-                    <span class="label bg-primary">Load More</span>
+                    <span class="label bg-primary">06 / 06 / 1993</span>
                 </span>
             </div>
         </div>
@@ -772,6 +862,7 @@
 
   <script>
     clickCounter =0;
+    clickCounterAvatar =0;
     function checkClicks() {
         clickCounter++;
         document.getElementById("virus").style.width = (15+clickCounter)+"%";
@@ -779,6 +870,19 @@
             $('#coffinDanceModal').modal('toggle');
             clickCounter =0;
             document.getElementById("virus").style.width = (15+clickCounter)+"%";
+        }
+    }
+    function checkClicksAvatar() {
+        clickCounterAvatar++;
+        if (clickCounterAvatar>10){
+            document.getElementById("avatar").setAttribute("src","avatarALT.jpg");
+        }
+        if (clickCounterAvatar>20){
+            document.getElementById("avatar").setAttribute("src","avatarALT2.jpg");
+        }
+        if (clickCounterAvatar>30){
+            document.getElementById("avatar").setAttribute("src","avatar.jpg");
+            clickCounterAvatar=0;
         }
     }
     $(document).ready(function(){
