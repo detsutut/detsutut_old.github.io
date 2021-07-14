@@ -17,7 +17,11 @@
   <link href="css/scrolling-nav.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
   <link rel="stylesheet" href="css//cvstyle.css">
-
+  <link rel="stylesheet" media="all" href="component/styles/setup.css" />
+  <link rel="stylesheet" media="all" href="component/styles/says.css" />
+  <link rel="stylesheet" media="all" href="component/styles/reply.css" />
+  <link rel="stylesheet" media="all" href="component/styles/typing.css" />
+  <link rel="stylesheet" media="all" href="component/styles/input.css" />
 </head>
 
 <body id="page-top">
@@ -58,6 +62,19 @@
       </p>
     </div>
   </header>
+
+  <div class="container" id="wwg-chat" style="position: fixed; bottom: 1%; right: 1%; z-index: 5; width: 300px;">
+    <div class="card text-white mb-3" style="background-color: rgba(0, 0, 0, 0.4); border:0px; border-radius: 20px; overflow:hidden;">
+      <div class="card-header" id = "chatHeader" data-toggle="collapse" data-parent="#wwg-chat" href="#chatContainer" style="background-color: rgba(0, 0, 0, 0.8); cursor:pointer; width: 110%; " onclick="$('#collapsed-chevron').toggleClass('la-rotate-180')">
+        <span>Detsutut Assistant 🤖</span> <span style="float:right; margin-right: 25px;"><i class="la la-chevron-circle-down" id="collapsed-chevron" ></i></span>
+      </div>
+      <div class="collapse" id="chatContainer">
+        <div class="card-block text-white mb-3" id="chat" style="height: 300px; background-color: rgba(0, 0, 0, 0.0);">
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <section id="about">
     <div class="container">
@@ -861,7 +878,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="component/Bubbles.js"></script>
+  <script src="component/ChatTree.js"></script>
   <script>
     clickCounter =0;
     clickCounterAvatar =0;
@@ -889,7 +907,59 @@
     }
     $(document).ready(function(){
       $('[data-toggle="popover"]').popover();
+      setTimeout(function(){
+        $('#chatHeader').click();
+        },500);
     });
+  </script>
+  <script>
+      // initialize by constructing a named function...
+        var chatWindow = new Bubbles(
+        document.getElementById("chat"), // ...passing HTML container element...
+        "chatWindow", // ...and name of the function as a parameter
+        { inputCallbackFn: function(o) {
+    // add error conversation block & recall it if no answer matched
+    var miss = function() {
+      chatWindow.talk(
+        {
+          "i-dont-get-it": {
+            says: [
+              "Sorry, I don't get it 😕. I'm still a work in progress and my AI reasoning is clearly missing the 'I' part.",
+              "Please repeat or just click below 👇"
+            ],
+            reply: o.convo[o.standingAnswer].reply
+          }
+        },
+        "i-dont-get-it"
+      )
+    }
+
+    // do this if answer found
+    var match = function(key) {
+      setTimeout(function() {
+        chatWindow.talk(convo, key) // restart current convo from point found in the answer
+      }, 600)
+    }
+
+    // sanitize text for search function
+    var strip = function(text) {
+      return text.toLowerCase().replace(/[\s.,\/#!$%\^&\*;:{}=\-_'"`~()]/g, "")
+    }
+
+    // search function
+    var found = false
+    o.convo[o.standingAnswer].reply.forEach(function(e, i) {
+      (strip(e.question).includes(strip(o.input)) || strip(e.keywords).includes(strip(o.input))) && o.input.length > 0
+        ? (found = e.answer)
+        : found ? null : (found = false)
+    })
+    found ? match(found) : miss()
+  }
+}) // done setting up chat-bubble
+
+
+        // `.talk()` will get your bot to begin the conversation
+        chatWindow.talk(convo);
   </script>
 
   <!-- Plugin JavaScript -->
