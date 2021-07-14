@@ -58,9 +58,9 @@ var convo = {
   "...oh! And he hates cinnamon."],
   reply: [
       {
-      question: "Brief summary",
-      keywords: "summary review description",
-      answer: "summary"
+      question: "What is he currently working on?",
+      keywords: "work working activity recent now",
+      answer: "work"
       },
       {
       question: "Start over",
@@ -75,9 +75,9 @@ var convo = {
   "You can find all the details about his work in the Timeline section of this page, though."],
   reply: [
       {
-      question: "What is he currently working on?",
-      keywords: "work working activity recent now",
-      answer: "work"
+      question: "Brief summary",
+      keywords: "summary review description",
+      answer: "summary"
       },
       {
       question: "Start over",
