@@ -76,7 +76,7 @@ var convo = {
       },
       {
         question: "Start over",
-        keywords: "start restart back",
+        keywords: "start restart  ",
         answer: "ice"
       }
     ]
@@ -101,7 +101,7 @@ var convo = {
       },
       {
         question: "Start over",
-        keywords: "start restart back",
+        keywords: "start restart  ",
         answer: "ice"
       }
     ]
@@ -118,7 +118,7 @@ var convo = {
       },
       {
         question: "Start over",
-        keywords: "start restart back",
+        keywords: "start restart ",
         answer: "ice"
       }
     ]
@@ -130,7 +130,7 @@ var convo = {
     confidence: 1,
     reply: [{
       question: "Start over",
-      keywords: "start restart back",
+      keywords: "start restart ",
       answer: "ice"
     }]
   },
@@ -141,7 +141,7 @@ var convo = {
     confidence: 3,
     reply: [{
       question: "Start over",
-      keywords: "start restart back",
+      keywords: "start restart ",
       answer: "ice"
     }]
   },
@@ -152,7 +152,18 @@ var convo = {
     confidence: 5,
     reply: [{
       question: "Start over",
-      keywords: "start restart back",
+      keywords: "start restart  ",
+      answer: "ice"
+    }]
+  },
+
+  jojo: {
+    says: ["<img src='https://media1.tenor.com/images/1f736eae161686c8cae0a0bfa1b62ccf/tenor.gif?itemid=16705205'/>","OH NO, YOU AWAKENED THE PILLAR MEN"],
+    keywords: ["jojo","warudo","zawarudo","oraoraoraora","ayayayay","joestar","jo-jo"],
+    confidence: 1,
+    reply: [{
+      question: "Start over",
+      keywords: "start restart  ",
       answer: "ice"
     }]
   },
@@ -163,7 +174,7 @@ var convo = {
     confidence: 2,
     reply: [{
       question: "Start over",
-      keywords: "start restart back",
+      keywords: "start restart  ",
       answer: "ice"
     }]
   }
