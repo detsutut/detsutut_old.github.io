@@ -58,8 +58,6 @@ function loadHtmlData() {
                       `;
               break;
           case 'paper':
-              var test = dataItem.title;
-              console.log(test);
               newHtml = `<div id='itemid${index}' class='timeline-item'>\
                           <div class='timeline-point timeline-point'\
                               style='background-color: #00aced; color: #00aced;'></div>\
@@ -71,7 +69,7 @@ function loadHtmlData() {
                                               <i class='la la-newspaper-o' style='font-size: 4rem;'></i>\
                                           </div>\
                                           <div class='media-body align-self-center pl-4'>\
-                                              <strong>${test}</strong><br>\
+                                              <strong>${dataItem.title}</strong><br>\
                                               <i>${dataItem.subtitle}</i><br><br>${dataItem.description}</div>\
                                       </div>\
                                   </div>\

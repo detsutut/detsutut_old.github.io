@@ -126,6 +126,41 @@ var convo = {
 
   thanks: {
     says: ["You are welcome!"],
+    keywords: ["thank", "thanks"],
+    confidence: 1,
+    reply: [{
+      question: "Start over",
+      keywords: "start restart back",
+      answer: "ice"
+    }]
+  },
+
+  how_are_you: {
+    says: ["I am fine, thanks!"],
+    keywords: ["how","are","you","doing"],
+    confidence: 3,
+    reply: [{
+      question: "Start over",
+      keywords: "start restart back",
+      answer: "ice"
+    }]
+  },
+
+  rickroll: {
+    says: ["<img src='https://media1.tenor.com/images/4324d537dbc06f422b34ae131c7b3e14/tenor.gif?itemid=7755460'/>","Never gonna let you down", "Never gonna run around and desert you", "Never gonna make you cry","Never gonna say goodbye","Never gonna tell a lie and hurt you"],
+    keywords: ["never","gonna","give","you","up"],
+    confidence: 5,
+    reply: [{
+      question: "Start over",
+      keywords: "start restart back",
+      answer: "ice"
+    }]
+  },
+
+  programming: {
+    says: ["I am proficient with R, Python, Javascript, Java, and C. I'm a quick learner, tho!"],
+    keywords: ["programming", "languages", "language", "skills"],
+    confidence: 2,
     reply: [{
       question: "Start over",
       keywords: "start restart back",

@@ -125,10 +125,10 @@
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-12">
                     <h2 style="text-align: center;">Timeline</h2> <br><br>
-                    <div id="itemContainer" class="timeline timeline-line-solid">       
+                    <div id="itemContainer" class="timeline timeline-line-solid">
                         <span class="timeline-label">
                             <span class="label bg-primary">Today</span>
-                        </span>          
+                        </span>
                     </div>
                 </div>
             </div>
@@ -146,7 +146,8 @@
                             marginheight="0" marginwidth="0"
                             src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Via%20Ferrata,%20Pavia,%20Italy+(Pavia)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                     </div>
-                    <span style="color: grey; font-size: small;"><i>Obvious disclaimer: map shows my current workplace location,
+                    <span style="color: grey; font-size: small;"><i>Obvious disclaimer: map shows my current workplace
+                            location,
                             not where I actually live. This is the internet, after all.</i></span>
                 </div>
             </div>
@@ -169,8 +170,8 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="data/data.js"></script>
+    <script src="data/ChatTree.js"></script>
     <script src="js/Bubbles.js"></script>
-    <script src="js/ChatTree.js"></script>
     <script src="js/DataLoader.js"></script>
     <script src="js/Easter.js"></script>
     <script>
@@ -207,6 +208,10 @@
                         )
                     }
 
+                    function intersect(a, b) {
+                        return a.filter(Set.prototype.has, new Set(b));
+                    }
+
                     // do this if answer found
                     var match = function (key) {
                         setTimeout(function () {
@@ -221,18 +226,36 @@
 
                     // intercept thanks
                     var interceptThanks = function (inputString) {
-                        return strip("thank thanks").includes(strip(inputString)) && inputString.length <= 50 && !inputString.includes("?")
+                        keywords = o.convo["thanks"].keywords
+                        processedInput = inputString.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").split(" ")
+                        return intersect(processedInput,keywords).length > 0 && inputString.length <= 50 && !inputString.includes("?")
                     }
+
+                    var interceptGeneral = function (inputString, key) {
+                        keywords = o.convo[key].keywords
+                        processedInput = inputString.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").split(" ")
+                        return intersect(processedInput,keywords).length >= o.convo[key].confidence
+                    } 
 
                     // search function
                     var found = false
+                    var outAnswer = null
                     if (interceptThanks(o.input)) {
-                        found = "thanks"
-                        obj = o.convo["thanks"].reply.find(item => {
+                        outAnswer = "thanks"
+                    } else if (interceptGeneral(o.input,"how_are_you")) {
+                        outAnswer = "how_are_you"
+                    } else if (interceptGeneral(o.input,"programming")) {
+                        outAnswer = "programming"
+                    } else if (interceptGeneral(o.input,"rickroll")) {
+                        outAnswer = "rickroll"
+                    }
+                    if (outAnswer!=null) {
+                        found = outAnswer
+                        obj = o.convo[found].reply.find(item => {
                             return item.question == 'Go back'
                         })
                         if (obj == undefined) {
-                            o.convo["thanks"].reply.push({ "question": "Go back", "keywords": "back repeat", "answer": o.standingAnswer })
+                            o.convo[found].reply.push({ "question": "Go back", "keywords": "back repeat", "answer": o.standingAnswer })
                         } else {
                             obj.answer = o.standingAnswer
                         }
