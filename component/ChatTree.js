@@ -30,7 +30,7 @@ var convo = {
   // another conversation object that can be queued from within
   // any other conversation object, including itself
   apple: {
-    says: ["Thank's for the apple! I was starving.", "...can I have another one?"],
+    says: ["Thanks for the apple! I was starving.", "...can I have another one?"],
     reply: [
       {
         question: "🍎🍎",
