@@ -1,4 +1,52 @@
 var data = [
+
+  {
+    type: "paper",
+    title: "Summarizing Medical Documents With NLP",
+    subtitle: "Jul 24, 2021 - Towards Data Science",
+    description: "Natural Language Processing with clinical documents is a hard task for many reasons. Here's how to do Medical Document Summarization without making any blunders.",
+    topics: [],
+    date: {
+      start: "24/07/2020",
+      end: null
+    },
+    footer: "https://towardsdatascience.com/summarizing-medical-documents-with-nlp-85b14e4d9411"
+  },
+
+  {
+    type: "job",
+    title: "Collaborator & Content Creator",
+    subtitle: "ComIntArt",
+    description: "ComIntArt is an Italian group that follows the 'popular science' approach to provide Artificial Intelligence contents to the general audience.",
+    topics: ["AI","Divulgation","Social"],
+    location: {
+      place:"Online",
+      link: "https://www.youtube.com/channel/UCMgjppN-5w5OAt67o2jzK7w"
+    },
+    date: {
+      start: "Mar 2021",
+      end: "ongoing"
+    },
+    image: "comintart.png"
+  },
+
+  {
+    type: "job",
+    title: "Software Engineer & NLP Consultant",
+    subtitle: "Biomeris S.r.l.",
+    description: "Working on Shiny R web application for OMOP cdm data visualization. Helping with NLP-related activities.",
+    topics: ["Shiny","R","Big Data","NLP"],
+    location: {
+      place:"Pavia",
+      link: "https://goo.gl/maps/JkFHxR87TyY2Bc95A"
+    },
+    date: {
+      start: "Feb 2021",
+      end: "ongoing"
+    },
+    image: "biomeris.png"
+  },
+
   {
     type: "token",
     title: "2021"
@@ -9,7 +57,7 @@ var data = [
     title: "Ph.D. Student",
     subtitle: "Big Data & Biomedical Informatics",
     description: "Currently&#32;researching&#32;NLP&#32;techniques&#32;to&#32;improve&#32;patient&#32;representation&#32;learning&#32;and&#32;classification&#32;with&#32;italian&#32;biomedical&#32;language&#32;models.&#32;",
-    topics: ["NLP","TopicModeling","LanguageModels"],
+    topics: ["NLP","Topic Modeling","Language Models"],
     location: {
       place:"Pavia",
       link: "https://goo.gl/maps/JkFHxR87TyY2Bc95A"
