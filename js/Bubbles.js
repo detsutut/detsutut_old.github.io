@@ -328,11 +328,11 @@ function prepHTML(options) {
     link.media = "screen,print"
     document.getElementsByTagName("head")[0].appendChild(link)
   }
-  appendCSS(relative_path + "component/styles/input.css")
-  appendCSS(relative_path + "component/styles/reply.css")
-  appendCSS(relative_path + "component/styles/says.css")
-  appendCSS(relative_path + "component/styles/setup.css")
-  appendCSS(relative_path + "component/styles/typing.css")
+  appendCSS(relative_path + "css/styles/input.css")
+  appendCSS(relative_path + "css/styles/reply.css")
+  appendCSS(relative_path + "css/styles/says.css")
+  appendCSS(relative_path + "css/styles/setup.css")
+  appendCSS(relative_path + "css/styles/typing.css")
 }
 
 // exports for es6

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- ===================================== HEAD ============================================ -->
+
 <head>
 
     <meta charset="utf-8">
@@ -17,16 +19,17 @@
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="css//cvstyle.css">
-    <link rel="stylesheet" media="all" href="component/styles/setup.css" />
-    <link rel="stylesheet" media="all" href="component/styles/says.css" />
-    <link rel="stylesheet" media="all" href="component/styles/reply.css" />
-    <link rel="stylesheet" media="all" href="component/styles/typing.css" />
-    <link rel="stylesheet" media="all" href="component/styles/input.css" />
+    <link rel="stylesheet" media="all" href="css/styles/setup.css" />
+    <link rel="stylesheet" media="all" href="css/styles/says.css" />
+    <link rel="stylesheet" media="all" href="css/styles/reply.css" />
+    <link rel="stylesheet" media="all" href="css/styles/typing.css" />
+    <link rel="stylesheet" media="all" href="css/styles/input.css" />
 </head>
+
+<!-- ===================================== BODY ============================================ -->
 
 <body id="page-top" onload="Javascript:loadHtmlData();">
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">Tommaso Buonocore</a>
@@ -52,7 +55,7 @@
 
     <header class="bg-primary text-white">
         <div class="container text-center">
-            <img src="avatar.jpg" alt="Avatar" id="avatar" class="avatar" onclick="checkClicksAvatar()"
+            <img src="data/avatar.jpg" alt="Avatar" id="avatar" class="avatar" onclick="checkClicksAvatar()"
                 style="cursor:pointer">
             <br><br><br>
             <h1>Tommaso Mario Buonocore</h1>
@@ -143,8 +146,8 @@
                             marginheight="0" marginwidth="0"
                             src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Via%20Ferrata,%20Pavia,%20Italy+(Pavia)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
                     </div>
-                    <span style="color: grey; font-size: small;"><i>Disclaimer: map shows my current workplace location,
-                            not where I actually live. This is the internet, after all!</i></span>
+                    <span style="color: grey; font-size: small;"><i>Obvious disclaimer: map shows my current workplace location,
+                            not where I actually live. This is the internet, after all.</i></span>
                 </div>
             </div>
         </div>
@@ -160,189 +163,23 @@
         <!-- /.container -->
     </footer>
 
-
+    <!-- ===================================== SCRIPTS ============================================ -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="component/Bubbles.js"></script>
-    <script src="component/ChatTree.js"></script>
     <script src="data/data.js"></script>
+    <script src="js/Bubbles.js"></script>
+    <script src="js/ChatTree.js"></script>
+    <script src="js/DataLoader.js"></script>
+    <script src="js/Easter.js"></script>
     <script>
-        function loadHtmlData() {
-            for (index in data) {
-                var dataItem = data[index]
-                var newHtml = "";
-                switch (dataItem.type) {
-                    case 'job':
-                        topicHtml = "";
-                        for (topicIndex in dataItem.topics) {
-                            var topic = dataItem.topics[topicIndex];
-                            topicHtml += `
-                            <kbd style='cursor:pointer; background-color:#e76c90;'>${topic}</kbd>                                        
-                            `
-                        }
-                        newHtml = `
-                                <div class='timeline-item'>
-                                    <div class='timeline-point timeline-point'></div>
-                                    <div class='timeline-event'>
-                                        <div class='widget has-shadow'>
-                                            <div class='widget-header d-flex align-items-center'>
-                                                <div class='user-image'>
-                                                    <img class='rounded-circle' src=${dataItem.image} alt='...'>
-                                                </div>
-                                                <div class='d-flex flex-column mr-auto'>
-                                                    <div class='title'>
-                                                        <span class='username'>${dataItem.title}</span><br>
-                                                        ${dataItem.subtitle}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class='widget-body'>
-                                                <p>
-                                                    ${dataItem.description}
-                                                </p>
-                                                <p>
-                                                    ${topicHtml}
-                                                </p>
-                                            </div>
-                                            <div class='widget-footer'>
-                                                <div class='row'>
-                                                    <div class='col'>
-                                                        <a href=${dataItem.location.link} target='_blank'
-                                                            style='text-decoration: none; '><i class='la la-map-marker'
-                                                                style='text-decoration: none; color:#e76c90; font-size: 1.0rem;'><span
-                                                                    style='font-weight:100 ;font-family: Arial, Helvetica, sans-serif;'>${dataItem.location.place}</span></i></a>
-                                                    </div>
-                                                    <div class='col'>
-                                                        <i class='la la-calendar'
-                                                            style='text-decoration: none; color:#e76c90; font-size: 1.0rem;'><span
-                                                                style='font-weight:100 ;font-family: Arial, Helvetica, sans-serif;'>${dataItem.date.start}
-                                                                - ${dataItem.date.end}</span></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='time-right'>${dataItem.date.start}</div>
-                                    </div>
-                                </div>
-                                `;
-                        break;
-                    case 'paper':
-                        var test = dataItem.title;
-                        console.log(test);
-                        newHtml = `<div id='itemid${index}' class='timeline-item'>\
-                                    <div class='timeline-point timeline-point'\
-                                        style='background-color: #00aced; color: #00aced;'></div>\
-                                    <div class='timeline-event'>\
-                                        <div class='widget icon-widget has-shadow' style='background-color: #00aced;'>\
-                                            <div class='widget-body' style='color: #fff;'>\
-                                                <div class='media'>\
-                                                    <div class='media-left '>\
-                                                        <i class='la la-newspaper-o' style='font-size: 4rem;'></i>\
-                                                    </div>\
-                                                    <div class='media-body align-self-center pl-4'>\
-                                                        <strong>${test}</strong><br>\
-                                                        <i>${dataItem.subtitle}</i><br><br>${dataItem.description}</div>\
-                                                </div>\
-                                            </div>\
-                                            <div class='widget-footer no-bg no-border pt-0 d-flex justify-content-end'>\
-                                                <div class='meta' style='font-size: 0.85rem;'>\
-                                                    <ul>\
-                                                        <li><a href=${dataItem.footer} target='_blank'><span class='numb' style='color: #fff;'>Read more <i class='la la-external-link'></i></span></a></li>\
-                                                    </ul>\
-                                                </div>\
-                                            </div>\
-                                        </div>\
-                                        <div class='time-right'>${dataItem.date.start}</div>\
-                                    </div>\
-                                </div>\
-                                `;
-                        break;
-                    case 'project':
-                        newHtml = `
-                                <div class='timeline-item'>
-                                    <div class='timeline-point timeline-point'
-                                        style='background-color: #fd6f71; color: #fd6f71;'></div>
-                                    <div class='timeline-event'>
-                                        <div class='widget icon-widget has-shadow' style='background-color: #fd6f71;'>
-                                            <div class='widget-body' style='color: #fff;'>
-                                                <div class='media'>
-                                                    <div class='media-left'>
-                                                        <i class='la la-flask' style='font-size: 4rem;'></i>
-                                                    </div>
-                                                    <div class='media-body align-self-center pl-4'>
-                                                        <strong>${dataItem.title}</strong><br>
-                                                        <i>${dataItem.subtitle}</i><br><br>
-                                                        ${dataItem.description}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class='widget-footer no-bg no-border pt-0 d-flex justify-content-end'>
-                                                <div class='meta' style='font-size: 0.85rem;'>
-                                                    <ul>
-                                                        <li><a href=${dataItem.footer}
-                                                                target='_blank'><span class='numb' style='color: #fff;'>Source
-                                                                    code <i class='la la-github'
-                                                                        style='color: #fff;'></i></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='time-right'>${dataItem.date.start}</div>
-                                    </div>
-                                </div>                    
-                                `;
-                        break;
-                    case 'token':
-                        newHtml = `
-                                <span class='timeline-label'>
-                                <span class='label'>${dataItem.title}</span>
-                                <br><br><br>
-                                </span>
-                                `;
-                        break;
-                    case 'special':
-                        newHtml = dataItem.content;
-                        break;
-                }
-                $('#itemContainer').append(newHtml);
-            }
-        }
-    </script>
-    <script>
-        clickCounter = 0;
-        clickCounterAvatar = 0;
-        function checkClicks() {
-            clickCounter++;
-            document.getElementById('virus').style.width = (15 + clickCounter) + '%';
-            if (clickCounter > 10) {
-                $('#coffinDanceModal').modal('toggle');
-                clickCounter = 0;
-                document.getElementById('virus').style.width = (15 + clickCounter) + '%';
-            }
-        }
-        function checkClicksAvatar() {
-            clickCounterAvatar++;
-            if (clickCounterAvatar > 10) {
-                document.getElementById('avatar').setAttribute('src', 'avatarALT.jpg');
-            }
-            if (clickCounterAvatar > 20) {
-                document.getElementById('avatar').setAttribute('src', 'avatarALT2.jpg');
-            }
-            if (clickCounterAvatar > 30) {
-                document.getElementById('avatar').setAttribute('src', 'avatar.jpg');
-                clickCounterAvatar = 0;
-            }
-        }
         $(document).ready(function () {
             $("[data-toggle='popover']").popover();
             setTimeout(function () {
                 $('#chatHeader').click();
             }, 500);
         });
-    </script>
-    <script>
         // initialize by constructing a named function...
         var chatWindow = new Bubbles(
             document.getElementById('chat'), // ...passing HTML container element...
@@ -409,17 +246,11 @@
                     found ? match(found) : miss()
                 }
             }) // done setting up chat-bubble
-
-
         // `.talk()` will get your bot to begin the conversation
         chatWindow.talk(convo);
-        // this function is called when user asks for banana
     </script>
 
-    <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
 
 </body>

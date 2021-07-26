@@ -27,7 +27,7 @@ var data = [
       start: "Mar 2021",
       end: "ongoing"
     },
-    image: "comintart.png"
+    image: "data/comintart.png"
   },
 
   {
@@ -44,7 +44,7 @@ var data = [
       start: "Feb 2021",
       end: "ongoing"
     },
-    image: "biomeris.png"
+    image: "data/biomeris.png"
   },
 
   {
@@ -66,7 +66,7 @@ var data = [
       start: "01/10/2020",
       end: "ongoing"
     },
-    image: "unipv.png"
+    image: "data/unipv.png"
   },
 
   {
@@ -136,7 +136,7 @@ var data = [
 
   {
     type: "special",
-    content: "<span class='timeline-virus tilt' onclick='checkClicks()'> <br><br><br> <img src='virus.png' id='virus' class='img-fluid rounded-circle' alt='...' style='width:15%; cursor: pointer;'> <br><br><br><br> </span> <!-- Modal --> <div class='modal fade' style='opacity:0.9;' id='coffinDanceModal' tabindex='-1' role='dialog' aria-labelledby='coffinDanceModal' aria-hidden='true'> <div class='modal-dialog modal-dialog-centered' role='document'> <div class='modal-content'> <div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/pDmB76y7jFs' allowfullscreen></iframe> </div> </div> </div> </div>",
+    content: "<span class='timeline-virus tilt' onclick='checkClicks()'> <br><br><br> <img src='data/virus.png' id='virus' class='img-fluid rounded-circle' alt='...' style='width:15%; cursor: pointer;'> <br><br><br><br> </span> <!-- Modal --> <div class='modal fade' style='opacity:0.9;' id='coffinDanceModal' tabindex='-1' role='dialog' aria-labelledby='coffinDanceModal' aria-hidden='true'> <div class='modal-dialog modal-dialog-centered' role='document'> <div class='modal-content'> <div class='embed-responsive embed-responsive-16by9'> <iframe class='embed-responsive-item' src='https://www.youtube.com/embed/pDmB76y7jFs' allowfullscreen></iframe> </div> </div> </div> </div>",
   },
 
   {
@@ -197,12 +197,12 @@ var data = [
       start: "Aug 2019",
       end: "Mar 2020"
     },
-    image: "umc.png"
+    image: "data/umc.png"
   },
 
   {
     type:"special",
-    content:"<span class='timeline-virus tilt' data-toggle='modal' data-target='#exampleModalCenter'> <br> <img src='grad.png' class='img-fluid rounded-circle ' alt='...' style='cursor: pointer; width:15%'> <br><br><br><br> </span> <!-- Modal --> <div class='modal fade' style='opacity:0.9;' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'> <div class='modal-dialog modal-dialog-centered' role='document'> <div class='modal-content'> <div class='modal-header'> <h5 class='modal-title' id='exampleModalLongTitle'>Master's Degree in Biomedical Engineering</h5><br> <button type='button' class='close' data-dismiss='modal' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div> <div class='modal-body'> <h6>University of Pavia, 110 / 110 Cum Laude</h6> <p> Period: Sep 2016 - Jul 2019 </p> <p> Courses: <ul> <li>Advanced Biomedical Machine Learning (30/30)</li> <li>Medical Informatics (30L/30)</li> <li>Data Mining and Clinical Decision Support (30/30)</li> <li>Telemedicine (29/30)</li> <li>Information Security (30/30)</li> <li>Biomathematics (28/30)</li> <li>Artificial Intelligence in Medicine (28/30)</li> </ul> </p> <p>Link: <a href='http://lmbioing.unipv.eu/' target='_blank'> Biomedical Engineering official website</a></p> </div> <div class='modal-footer'> <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button> </div> </div> </div> </div>"
+    content:"<span class='timeline-virus tilt' data-toggle='modal' data-target='#exampleModalCenter'> <br> <img src='data/grad.png' class='img-fluid rounded-circle ' alt='...' style='cursor: pointer; width:15%'> <br><br><br><br> </span> <!-- Modal --> <div class='modal fade' style='opacity:0.9;' id='exampleModalCenter' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'> <div class='modal-dialog modal-dialog-centered' role='document'> <div class='modal-content'> <div class='modal-header'> <h5 class='modal-title' id='exampleModalLongTitle'>Master's Degree in Biomedical Engineering</h5><br> <button type='button' class='close' data-dismiss='modal' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div> <div class='modal-body'> <h6>University of Pavia, 110 / 110 Cum Laude</h6> <p> Period: Sep 2016 - Jul 2019 </p> <p> Courses: <ul> <li>Advanced Biomedical Machine Learning (30/30)</li> <li>Medical Informatics (30L/30)</li> <li>Data Mining and Clinical Decision Support (30/30)</li> <li>Telemedicine (29/30)</li> <li>Information Security (30/30)</li> <li>Biomathematics (28/30)</li> <li>Artificial Intelligence in Medicine (28/30)</li> </ul> </p> <p>Link: <a href='http://lmbioing.unipv.eu/' target='_blank'> Biomedical Engineering official website</a></p> </div> <div class='modal-footer'> <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button> </div> </div> </div> </div>"
   },
 
   {
@@ -219,7 +219,7 @@ var data = [
       start: "May 2019",
       end: "Jul 2019"
     },
-    image: "biomeris.png"
+    image: "data/biomeris.png"
   },
 
   {
@@ -275,7 +275,7 @@ var data = [
       start: "Mar 2019",
       end: "Ongoing"
     },
-    image: "tds.png"
+    image: "data/tds.png"
   },
 
   {
@@ -297,7 +297,7 @@ var data = [
       start: "Oct 2018",
       end: "Mar 2019"
     },
-    image: "umc.png"
+    image: "data/umc.png"
   },
 
   {
@@ -324,12 +324,12 @@ var data = [
       start: "Apr 2016",
       end: "Sep 2016"
     },
-    image: "umc.png"
+    image: "data/umc.png"
   },
 
   {
     type: "special",
-    content: "<span class='timeline-virus tilt' data-toggle='modal' data-target='#modalBachelor'> <br> <img src='grad.png' class='img-fluid rounded-circle ' alt='...' style='cursor: pointer; width:15%'> <br><br><br><br> </span> <!-- Modal --> <div class='modal fade' style='opacity:0.9;' id='modalBachelor' tabindex='-1' role='dialog' aria-labelledby='modalBachelorTitle' aria-hidden='true'> <div class='modal-dialog modal-dialog-centered' role='document'> <div class='modal-content'> <div class='modal-header'> <h5 class='modal-title' id='modalBachelorTitle'>Bachelor's Degree in Biomedical Engineering</h5><br> <button type='button' class='close' data-dismiss='modal' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div> <div class='modal-body'> <h6>University of Pavia, 100 / 110 </h6> <p> Period: Sep 2012 - Apr 2016 </p> <p> Courses: <ul> <li>Advanced Biomedical Machine Learning (30/30)</li> <li>Medical Informatics (30L/30)</li> <li>Data Mining and Clinical Decision Support (30/30)</li> <li>Telemedicine (29/30)</li> <li>Information Security (30/30)</li> <li>Biomathematics (28/30)</li> <li>Artificial Intelligence in Medicine (28/30)</li> </ul> </p> <p>Link: <a href='http://lmbioing.unipv.eu/' target='_blank'> Biomedical Engineering official website</a></p> </div> <div class='modal-footer'> <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button> </div> </div> </div> </div>"
+    content: "<span class='timeline-virus tilt' data-toggle='modal' data-target='#modalBachelor'> <br> <img src='data/grad.png' class='img-fluid rounded-circle ' alt='...' style='cursor: pointer; width:15%'> <br><br><br><br> </span> <!-- Modal --> <div class='modal fade' style='opacity:0.9;' id='modalBachelor' tabindex='-1' role='dialog' aria-labelledby='modalBachelorTitle' aria-hidden='true'> <div class='modal-dialog modal-dialog-centered' role='document'> <div class='modal-content'> <div class='modal-header'> <h5 class='modal-title' id='modalBachelorTitle'>Bachelor's Degree in Biomedical Engineering</h5><br> <button type='button' class='close' data-dismiss='modal' aria-label='Close'> <span aria-hidden='true'>&times;</span> </button> </div> <div class='modal-body'> <h6>University of Pavia, 100 / 110 </h6> <p> Period: Sep 2012 - Apr 2016 </p> <p> Courses: <ul> <li>Advanced Biomedical Machine Learning (30/30)</li> <li>Medical Informatics (30L/30)</li> <li>Data Mining and Clinical Decision Support (30/30)</li> <li>Telemedicine (29/30)</li> <li>Information Security (30/30)</li> <li>Biomathematics (28/30)</li> <li>Artificial Intelligence in Medicine (28/30)</li> </ul> </p> <p>Link: <a href='http://lmbioing.unipv.eu/' target='_blank'> Biomedical Engineering official website</a></p> </div> <div class='modal-footer'> <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button> </div> </div> </div> </div>"
   },
 
   {
