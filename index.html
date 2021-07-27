@@ -43,7 +43,7 @@
                         <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#timeline">Timeline</a>
+                        <a id ="timelineShortcut" class="nav-link js-scroll-trigger" href="#timeline">Timeline</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -121,6 +121,12 @@
     </section>
 
     <section id="timeline" class="bg-light">
+        <div id="filterGroup" class="btn-group-vertical" role="group" style="position: sticky; z-index: 50; top: 70px; left: 40px; opacity: 0.7;">
+            <button type="button" class="btn active btn-dark" onclick="filterTimeline();"> No Filter </button>
+            <button type="button" class="btn btn-dark" onclick="filterTimeline('job');"> Jobs</button>
+            <button type="button" class="btn btn-dark" onclick="filterTimeline('paper');"> Papers</button>
+            <button type="button" class="btn btn-dark" onclick="filterTimeline('project');"> Projects</button>
+        </div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-12">
@@ -250,6 +256,8 @@
                         outAnswer = "rickroll"
                     } else if (interceptGeneral(o.input,"jojo")) {
                         outAnswer = "jojo"
+                    } else if (interceptGeneral(o.input,"filter")) {
+                        outAnswer = "filter"
                     }
                     if (outAnswer!=null) {
                         found = outAnswer

@@ -10,6 +10,11 @@ var convo = {
     // as a reply
     reply: [
       {
+        question: "🍎", // label for the reply option
+        keywords: "apple appel apples fruit",
+        answer: "apple" // key for the next conversation object
+      },
+      {
         question: "Tell me something about you",
         keywords: "summary review description about",
         answer: "summary"
@@ -20,9 +25,9 @@ var convo = {
         answer: "work"
       },
       {
-        question: "🍎", // label for the reply option
-        keywords: "apple appel apples fruit",
-        answer: "apple" // key for the next conversation object
+        question: "Filter the Timeline",
+        keywords: "filter timeline filt filters",
+        answer: "filter"
       }
     ]
   }, // end required "ice" conversation object
@@ -124,6 +129,19 @@ var convo = {
     ]
   },
 
+  after_filter: {
+    says: ["All right! I filtered out the results as requested."],
+    reply: [
+      {
+        question: "Start over",
+        keywords: "start restart ",
+        answer: "ice"
+      }
+    ]
+  },
+
+  //GENERIC ANSWERS, NOT LINKED TO THE TREE
+
   thanks: {
     says: ["You are welcome!"],
     keywords: ["thank", "thanks"],
@@ -177,16 +195,83 @@ var convo = {
       keywords: "start restart  ",
       answer: "ice"
     }]
+  },
+
+  filter: {
+    says: ["Which time points do you want to see?"],
+    keywords: ["filter", "timeline"],
+    confidence: 1,
+    reply: [{
+      question: "Jobs",
+      keywords: "job work jobs",
+      answer: "jobsOnly"
+    },
+    {
+      question: "Papers/Articles",
+      keywords: "paper papers article articles",
+      answer: "papersOnly"
+    },
+    {
+      question: "Projects",
+      keywords: "project projects proj",
+      answer: "projectsOnly"
+    },
+    {
+      question: "Everything",
+      keywords: "all everything",
+      answer: "loadEverything"
+    }]
   }
+
 }
 
-amsterdamFunction = function () {
-  chatWindow.talk(convo, "amsterdam") // the conversation can be easily restarted from here.
+// FUNCTIONS
+
+moveToLocationLast = function(location){
+  id=0
+  for (index in data) {
+    var dataItem = data[index]
+    if(dataItem.type=="job" && dataItem.location.place=="Amsterdam"){
+      id=index;
+      break;
+    }
+  }
   setTimeout(function () {
-    document.getElementById("amsterdam").scrollIntoView(
+    document.getElementById("TI"+id).scrollIntoView(
     {
       behavior: 'auto',
       block: 'center',
       inline: 'center'
-    })}, 3000)
+  })}, 3000)
+}
+
+amsterdamFunction = function () {
+  chatWindow.talk(convo, "amsterdam") 
+  moveToLocationLast("Amsterdam")
+}
+
+filterTimeline = function(filterName=null){
+  clearHtmlData();
+  loadHtmlData(filterName);
+  document.getElementById("timelineShortcut").click();
+}
+
+jobsOnly = function() {
+  filterTimeline('job');
+  chatWindow.talk(convo, "after_filter");
+}
+
+papersOnly = function() {
+  filterTimeline('paper');
+  chatWindow.talk(convo, "after_filter");
+}
+
+projectsOnly = function() {
+  filterTimeline('project');
+  chatWindow.talk(convo, "after_filter");
+}
+
+loadEverything = function() {
+  filterTimeline();
+  chatWindow.talk(convo, "after_filter");
 }

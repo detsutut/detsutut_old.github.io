@@ -1,18 +1,24 @@
-function loadHtmlData() {
-  for (index in data) {
-      var dataItem = data[index]
-      var newHtml = "";
-      switch (dataItem.type) {
-          case 'job':
-              topicHtml = "";
-              for (topicIndex in dataItem.topics) {
-                  var topic = dataItem.topics[topicIndex];
-                  topicHtml += `
+function clearHtmlData() {
+    $('#itemContainer').empty();
+    $('#itemContainer').append("<span class='timeline-label'><span class='label bg-primary'>Today</span></span>");
+}
+
+function loadHtmlData(filter = null) {
+    for (index in data) {
+        var dataItem = data[index]
+        var newHtml = "";
+        switch (dataItem.type) {
+            case 'job':
+                if (filter != null && filter != 'job') break;
+                topicHtml = "";
+                for (topicIndex in dataItem.topics) {
+                    var topic = dataItem.topics[topicIndex];
+                    topicHtml += `
                   <kbd style='cursor:pointer; background-color:#e76c90;'>${topic}</kbd>                                        
                   `
-              }
-              newHtml = `
-                      <div class='timeline-item'>
+                }
+                newHtml = `
+                      <div class='timeline-item' id='TI${index}'>
                           <div class='timeline-point timeline-point'></div>
                           <div class='timeline-event'>
                               <div class='widget has-shadow'>
@@ -56,9 +62,10 @@ function loadHtmlData() {
                           </div>
                       </div>
                       `;
-              break;
-          case 'paper':
-              newHtml = `<div id='itemid${index}' class='timeline-item'>\
+                break;
+            case 'paper':
+                if (filter != null && filter != 'paper') break;
+                newHtml = `<div id='itemid${index}' class='timeline-item'>\
                           <div class='timeline-point timeline-point'\
                               style='background-color: #00aced; color: #00aced;'></div>\
                           <div class='timeline-event'>\
@@ -85,9 +92,10 @@ function loadHtmlData() {
                           </div>\
                       </div>\
                       `;
-              break;
-          case 'project':
-              newHtml = `
+                break;
+            case 'project':
+                if (filter != null && filter != 'project') break;
+                newHtml = `
                       <div class='timeline-item'>
                           <div class='timeline-point timeline-point'
                               style='background-color: #fd6f71; color: #fd6f71;'></div>
@@ -120,19 +128,19 @@ function loadHtmlData() {
                           </div>
                       </div>                    
                       `;
-              break;
-          case 'token':
-              newHtml = `
-                      <span class='timeline-label'>
-                      <span class='label'>${dataItem.title}</span>
-                      <br><br><br>
-                      </span>
-                      `;
-              break;
-          case 'special':
-              newHtml = dataItem.content;
-              break;
-      }
-      $('#itemContainer').append(newHtml);
-  }
+                break;
+            case 'token':
+                newHtml = `
+                        <span class='timeline-label'>
+                        <span class='label'>${dataItem.title}</span>
+                        <br><br><br>
+                        </span>
+                        `;
+                break;
+            case 'special':
+                newHtml = dataItem.content;
+                break;
+        }
+        $('#itemContainer').append(newHtml);
+    }
 }
